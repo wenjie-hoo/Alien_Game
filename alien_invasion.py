@@ -19,13 +19,8 @@ def run_game():
     #   开始游戏的主循环
     while True:
         #   监听鼠标和键盘事件
-        gf.check_events()
-
-        #   每次循环时都刷新
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-
-        #   让最近绘制的屏幕可见
-        pygame.display.flip()
+        gf.check_events(ship)
+        ship.update()
+        gf.update_screen(ai_settings,screen,ship)
 
 run_game()
