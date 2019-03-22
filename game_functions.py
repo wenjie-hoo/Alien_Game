@@ -8,6 +8,7 @@ def check_keydown_event(event,ship):
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
 
+
 def check_keyup_event(event,ship):
     '''响应松开'''
     if event.key == pygame.K_RIGHT:
