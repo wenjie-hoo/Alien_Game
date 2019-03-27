@@ -10,7 +10,7 @@ def run_game():
     #   初始化游戏并创造一个屏幕对象
     pygame.init()
     ai_settings = Setting()
-    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_heiht))
+    screen = pygame.display.set_mode((ai_settings.screen_width,ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
 
     #   创建一个飞船
@@ -19,7 +19,7 @@ def run_game():
     #   创建一个用于储存子弹的编组
     bullets = Group()
     aliens = Group()
-    gf.create_fleet(ai_settings,screen,aliens)
+    gf.create_fleet(ai_settings,screen,ship,aliens)
 
     #   开始游戏的主循环
     while True:
