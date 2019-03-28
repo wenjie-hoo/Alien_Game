@@ -54,6 +54,10 @@ def update_bullets(bullets):
         if bullet.rect.bottom < 0:
             bullets.remove(bullet)
 
+def update_alien(aliens):
+    '''更新外星人群中所有的外星人位置'''
+    aliens.update()
+
 def create_fleet(ai_settings,screen,ship,aliens):
     '''创建外星人群'''
     #   创建一个外星人，并计算一行可容纳多少个外星人
@@ -83,7 +87,7 @@ def create_alien(ai_settings,screen,aliens,alien_number,row_number):
     '''创建一个外星人并将它放在当前行'''
     alien = Alien(ai_settings,screen)
     alien_width = alien.rect.width
-    alien.x = alien.width + 2 * alien.width * alien_number
+    alien.x = alien.rect.width + 2 * alien.rect.width * alien_number
     alien.rect.x = alien.x
     alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
     aliens.add(alien)

@@ -19,6 +19,7 @@ def run_game():
     #   创建一个用于储存子弹的编组
     bullets = Group()
     aliens = Group()
+    #   创建外星群
     gf.create_fleet(ai_settings,screen,ship,aliens)
 
     #   开始游戏的主循环
@@ -26,6 +27,7 @@ def run_game():
         #   监听鼠标和键盘事件
         gf.check_events(ai_settings,screen,ship,bullets)
         ship.update()
+        gf.update_alien(aliens)
         gf.update_bullets(bullets)
         gf.update_screen(ai_settings,screen,ship,aliens,bullets)
 
