@@ -57,7 +57,7 @@ def check_play_button(ai_settings,screen,stats,play_button,ship,aliens,bullets,m
         #   隐藏鼠标
         pygame.mouse.set_visible(False)
 
-def update_screen(ai_settings,screen,stats,ship,aliens,bullets,play_button):
+def update_screen(ai_settings,screen,stats,sb,ship,aliens,bullets,play_button):
     '''每次循环时都刷新'''
     screen.fill(ai_settings.bg_color)
     #   在飞船和外星人后面重绘所有子弹
@@ -65,6 +65,8 @@ def update_screen(ai_settings,screen,stats,ship,aliens,bullets,play_button):
         bullet.draw_bullet()
     ship.blitme()
     aliens.draw(screen)
+    sb.show_score()
+    #   如果游戏处于非活动状态，就显示play按键
     if not stats.game_active:
         play_button.draw_button()
 
