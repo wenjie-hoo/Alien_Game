@@ -8,12 +8,12 @@ class Ship():
         self.ai_settings = ai_settings
 
         #   加载飞船图像并获取其外接矩形
-        self.image = pygame.image.load('./images/ship.bmp')
+        self.image = pygame.image.load('./images/lu.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
         #   将每艘飞船放在屏幕底部
-        self.rect.centerx = self.screen_rect.centerx
+        #self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
 
         #   在飞船的属性center中存储最小数值

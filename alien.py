@@ -9,7 +9,7 @@ class Alien(Sprite):
         self.ai_settings = ai_settings
 
         #   加载外星人图像
-        self.image = pygame.image.load('./images/alien.bmp')
+        self.image = pygame.image.load('./images/dandan.gif')
         self.rect = self.image.get_rect()
 
         #   每个外星人初时都在屏幕左上角
